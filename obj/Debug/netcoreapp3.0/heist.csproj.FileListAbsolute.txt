@@ -1,0 +1,11 @@
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist.deps.json
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist.runtimeconfig.json
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist.runtimeconfig.dev.json
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist.dll
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/bin/Debug/netcoreapp3.0/heist.pdb
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/obj/Debug/netcoreapp3.0/heist.csprojAssemblyReference.cache
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/obj/Debug/netcoreapp3.0/heist.AssemblyInfoInputs.cache
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/obj/Debug/netcoreapp3.0/heist.AssemblyInfo.cs
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/obj/Debug/netcoreapp3.0/heist.dll
+/home/snyderjosephd/nss/workspace/csharp/exercises/dictionaries/heist/obj/Debug/netcoreapp3.0/heist.pdb
