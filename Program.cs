@@ -15,7 +15,7 @@ namespace heist
 
             Console.WriteLine("Plan your Heist");
 
-            List<Dictionary<string, string>> team = new List<Dictionary<string, string>>();
+            List<TeamMember> team = new List<TeamMember>();
 
             Console.WriteLine("Enter the bank's difficulty level> ");
             int bankDifficultyStart = int.Parse(Console.ReadLine());
@@ -34,11 +34,10 @@ namespace heist
                 Console.Write("Courage Factor> ");
                 string courageFactor = Console.ReadLine();
 
-                Dictionary<string, string> member = new Dictionary<string, string>() {
-                    {"Name", name},
-                    {"Skill Level", skillLevel},
-                    {"Courage Factor", courageFactor}
-                };
+                TeamMember member = new TeamMember();
+                member.Name = name;
+                member.SkillLevel = int.Parse(skillLevel);
+                member.CourageFactor = double.Parse(courageFactor);
 
                 team.Add(member);
                 Console.WriteLine();
@@ -51,20 +50,17 @@ namespace heist
             Console.WriteLine($"Team Size: {team.Count}");
 
             int teamSkill = 0;
-            foreach(Dictionary<string, string> member in team)
+            foreach(TeamMember member in team)
             {
-                string skillLevel = member["Skill Level"];
-                teamSkill += int.Parse(skillLevel);
+                teamSkill += member.SkillLevel;
             }
 
             Console.WriteLine("Please enter number of trials> ");
             int numTrials = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Dictionary<string, int> report = new Dictionary<string, int>() {
-                { "Successes", 0},
-                { "Failures", 0}
-            };
+
+            HeistReport report = new HeistReport();
 
             for (int i = 0; i < numTrials; i++)
             {
@@ -79,28 +75,21 @@ namespace heist
 
                 if (bankDifficulty > teamSkill)
                 {
-                    Console.WriteLine("Busted! You did not steal any of the money.");
-                    Console.WriteLine("--------------------");
-                    report["Failures"] += 1;
+                    // Console.WriteLine("Busted! You did not steal any of the money.");
+                    // Console.WriteLine("--------------------");
+                    report.FailureCount++;
                 }
                 else
                 {
-                    Console.WriteLine("Success! You stole all of the money.");
-                    Console.WriteLine("--------------------");
-                    report["Successes"] += 1;
+                    // Console.WriteLine("Success! You stole all of the money.");
+                    // Console.WriteLine("--------------------");
+                    report.SuccessCount++;
                 }
 
             }
 
-
-            Console.WriteLine("Heist Simulation Results");
-            Console.WriteLine("------------------------");
-            Console.WriteLine($"Number of Successes: {report["Successes"]}");
-            Console.WriteLine($"Number of Failures: {report["Failures"]}");
-            Console.WriteLine($"Number of Simulations: {numTrials}");
-            Console.WriteLine();
-
-
+            // Print results of the simulation
+            report.Print();
 
         }
     }
